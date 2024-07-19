@@ -1,0 +1,217 @@
+body {
+  background-color: #85c1e9;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #a9cce3;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+  color: #333;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  background-color: #f0f0f0;
+  border: 2px solid #333;
+  padding: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+button {
+  padding: 5px 10px;
+  margin-left: 3px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#TaskButton {
+  margin-left: 0px;
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+#TaskButton:hover {
+  background-color: #2980b9;
+}
+
+button:hover {
+  filter: brightness(85%);
+}
+
+button.status {
+  background-color: #3498db;
+  color: white;
+  float: right;
+}
+
+button.status:hover {
+  background-color: #2980b9;
+}
+
+button.edit {
+  background-color: #5dade2;
+  color: white;
+  float: right;
+}
+
+button.edit:hover {
+  background-color: #4b89aa;
+}
+
+button.delete {
+  background-color: #e74c3c;
+  color: white;
+  float: right;
+}
+
+button.delete:hover {
+  background-color: #c0392b;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.filters select,
+.filters input[type="text"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.filters input[type="text"]:focus,
+.filters select:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 5px 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #d6eaf8;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+li:hover {
+  background-color: #ebf5fb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+li.completed {
+  background-color: #aed6f1;
+}
+
+li.completed .task-title {
+  text-decoration: line-through;
+}
+
+li.in-progress {
+  background-color: #aed6f1;
+}
+
+li .task-details {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+li .task-title {
+  flex-grow: 1;
+  cursor: pointer;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+.description {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  word-wrap: break-word;
+}
+
+li.expanded .description {
+  max-height: 100px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #565c5c;
+}
+
+.task-status {
+  padding: 1px 1px;
+  margin-left: 499px;
+  display: block;
+  font-size: 12px;
+  color: #333;
+}
+
+li .buttons button {
+  margin-left: 3px;
+}
+
+li .task-actions {
+  display: flex;
+  align-items: center;
+}
+
+button.current-page {
+  background-color: #2980b9;
+  color: white;
+  font-weight: bold;
+}
+
+button.current-page:hover {
+  background-color: #1f6f8e;
+}

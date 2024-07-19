@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Management System</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="images/ICO.png" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="container">
+      <a href="https://meisters.solutions">
+        <img
+          src="/src/main/resources/static/images/logo.png"
+          alt="Logo"
+          class="logo"
+        />
+      </a>
+      <h1>Task Management System</h1>
+      <form id="taskForm">
+        <input
+          type="text"
+          id="titleInput"
+          placeholder="Task Title"
+          required
+          maxlength="100"
+        />
+        <input
+          type="text"
+          id="descriptionInput"
+          placeholder="Task Description"
+          required
+          maxlength="250"
+        />
+        <button type="submit" id="TaskButton">Add Task</button>
+        <div id="errorMessages" style="color: red; margin-top: 10px"></div>
+      </form>
+      <div class="filters">
+        <select id="statusFilter">
+          <option value="">All Status</option>
+          <option value="pending">Pending</option>
+          <option value="in-progress">In Progress</option>
+          <option value="completed">Completed</option>
+        </select>
+        <input type="text" id="searchInput" placeholder="Search by Title" />
+      </div>
+      <ul id="taskList" class="task-list"></ul>
+      <div id="paginationContainer" class="pagination"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
